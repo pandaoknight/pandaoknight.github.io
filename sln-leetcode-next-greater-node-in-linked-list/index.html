@@ -6,15 +6,15 @@
   
   <title>链表中的下一个更大节点·力扣题解 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="核心算法讨论为什么单调栈是一个O(n)而非O(n²)？在构筑单调栈的时候，一个元素它至多要弹n下栈，一共n个元素，应该 n方。但如果从整体来看，因为你一共只压了n次进去。所以，弹栈的总数是不会超过n的。因此是O(n)。 视频总结视频录制过长又想讲3个思路。又想讲3次迭代。又想讲2种栈的表示。最后录了一个40分钟的视频出来，前面写逐字稿写了5000+字。录视频草稿1遍，正录2遍。完全没有必要。必要想">
+  <meta name="description" content="视频链接B站：https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1LS4y1K7Tz&#x2F; 核心算法讨论为什么单调栈是一个O(n)而非O(n²)？在构筑单调栈的时候，一个元素它至多要弹n下栈，一共n个元素，应该 n方。但如果从整体来看，因为你一共只压了n次进去。所以，弹栈的总数是不会超过n的。因此是O(n)。 视频总结视频录制过长又想讲3个思路。又想讲3次迭代。又想讲2种栈的表示。最后">
 <meta property="og:type" content="article">
 <meta property="og:title" content="链表中的下一个更大节点·力扣题解">
 <meta property="og:url" content="https://pandaoknight.github.io/sln-leetcode-next-greater-node-in-linked-list/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="核心算法讨论为什么单调栈是一个O(n)而非O(n²)？在构筑单调栈的时候，一个元素它至多要弹n下栈，一共n个元素，应该 n方。但如果从整体来看，因为你一共只压了n次进去。所以，弹栈的总数是不会超过n的。因此是O(n)。 视频总结视频录制过长又想讲3个思路。又想讲3次迭代。又想讲2种栈的表示。最后录了一个40分钟的视频出来，前面写逐字稿写了5000+字。录视频草稿1遍，正录2遍。完全没有必要。必要想">
+<meta property="og:description" content="视频链接B站：https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1LS4y1K7Tz&#x2F; 核心算法讨论为什么单调栈是一个O(n)而非O(n²)？在构筑单调栈的时候，一个元素它至多要弹n下栈，一共n个元素，应该 n方。但如果从整体来看，因为你一共只压了n次进去。所以，弹栈的总数是不会超过n的。因此是O(n)。 视频总结视频录制过长又想讲3个思路。又想讲3次迭代。又想讲2种栈的表示。最后">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-04-01T09:53:27.000Z">
-<meta property="article:modified_time" content="2022-04-01T09:56:33.568Z">
+<meta property="article:modified_time" content="2022-04-01T10:07:05.597Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="POS">
 <meta property="article:tag" content="sln,leetcode">
@@ -97,7 +97,8 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h2 id="核心算法讨论"><a href="#核心算法讨论" class="headerlink" title="核心算法讨论"></a>核心算法讨论</h2><h3 id="为什么单调栈是一个O-n-而非O-n²-？"><a href="#为什么单调栈是一个O-n-而非O-n²-？" class="headerlink" title="为什么单调栈是一个O(n)而非O(n²)？"></a>为什么单调栈是一个O(n)而非O(n²)？</h3><p>在构筑单调栈的时候，一个元素它至多要弹n下栈，一共n个元素，应该 n方。<br>但如果从整体来看，因为你一共只压了n次进去。所以，弹栈的总数是不会超过n的。因此是O(n)。</p>
+        <h2 id="视频链接"><a href="#视频链接" class="headerlink" title="视频链接"></a>视频链接</h2><p>B站：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1LS4y1K7Tz/">https://www.bilibili.com/video/BV1LS4y1K7Tz/</a></p>
+<h2 id="核心算法讨论"><a href="#核心算法讨论" class="headerlink" title="核心算法讨论"></a>核心算法讨论</h2><h3 id="为什么单调栈是一个O-n-而非O-n²-？"><a href="#为什么单调栈是一个O-n-而非O-n²-？" class="headerlink" title="为什么单调栈是一个O(n)而非O(n²)？"></a>为什么单调栈是一个O(n)而非O(n²)？</h3><p>在构筑单调栈的时候，一个元素它至多要弹n下栈，一共n个元素，应该 n方。<br>但如果从整体来看，因为你一共只压了n次进去。所以，弹栈的总数是不会超过n的。因此是O(n)。</p>
 <h2 id="视频总结"><a href="#视频总结" class="headerlink" title="视频总结"></a>视频总结</h2><h3 id="视频录制过长"><a href="#视频录制过长" class="headerlink" title="视频录制过长"></a>视频录制过长</h3><p>又想讲3个思路。<br>又想讲3次迭代。<br>又想讲2种栈的表示。<br>最后录了一个40分钟的视频出来，前面写逐字稿写了5000+字。录视频草稿1遍，正录2遍。完全没有必要。必要想办法在录制阶段更高产。</p>
 <p>之后手稿只保留“段、节、脚本”，不保留具体的内容。正录就录1遍。</p>
 <h3 id="视频过程，必然剪得过碎"><a href="#视频过程，必然剪得过碎" class="headerlink" title="视频过程，必然剪得过碎"></a>视频过程，必然剪得过碎</h3><p>语言的流程度，是这次影响剪切的最大障碍！<br>干的最多的事情就是：把剪切点和我说话的时间对齐，然后把我的啊、哦、额、嗯、咳咳剪掉。</p>
@@ -125,7 +126,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://pandaoknight.github.io/sln-leetcode-next-greater-node-in-linked-list/" data-id="cl1g9enb70001x0tscsqxhju2" data-title="链表中的下一个更大节点·力扣题解" class="article-share-link">Share</a>
+      <a data-url="https://pandaoknight.github.io/sln-leetcode-next-greater-node-in-linked-list/" data-id="cl1g9hqot00007stsew3ch44v" data-title="链表中的下一个更大节点·力扣题解" class="article-share-link">Share</a>
       
       
       
